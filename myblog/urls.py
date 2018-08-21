@@ -20,5 +20,6 @@ import blog.views as bv
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/',include('blog.urls')),
+    path('blog/',include('blog.urls')),
+    path('blog2/', include('blog2.urls')),
 ]
