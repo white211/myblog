@@ -18,8 +18,9 @@ from django.conf.urls import url,include
 from django.urls import path
 import blog.views as bv
 
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('blog/',include('blog.urls')),
-    path('blog2/', include('blog2.urls')),
+    url(r'^admin/', admin.site.urls),
+    url(r'^blog/',include('blog.urls',namespace="blog")),
+    url(r'^blog2/', include('blog2.urls')),
 ]
